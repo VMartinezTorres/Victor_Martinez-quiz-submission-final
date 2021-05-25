@@ -379,9 +379,60 @@ ul li {
   align-items: center;
 }
 
+main {
+  display: grid;
+  grid-template-areas: "header" "creative" "journal" "footer";
+}
+main .header {
+  grid-area: header;
+}
+main .header .title {
+  display: flex;
+  justify-content: center;
+}
+main .creative {
+  height: 70px;
+  margin: 30px 10px 0;
+}
+main .journal {
+  grid-area: journal;
+}
+main .journal ul {
+  display: grid;
+  grid-gap: 40px;
+  grid-template-areas: "imgg1" "imgg2" "imgg3";
+}
+@media (min-width: 768px) {
+  main .journal ul {
+    grid-template-columns: repeat(2, 300px);
+    grid-template-areas: "imgg1 imgg1 imgg2 imgg2" "imgg3 imgg3";
+  }
+}
+@media (min-width: 992px) {
+  main .journal ul {
+    grid-template-columns: repeat(3, 300px);
+    grid-template-areas: "imgg1 imgg1 imgg2 imgg2 imgg3 imgg3";
+  }
+}
+main #footer {
+  grid-area: footer;
+}
+main #footer .socials ul {
+  display: flex;
+}
+@media (min-width: 992px) {
+  main #footer {
+    grid-template-areas: "locations  newsletter socials";
+  }
+}
+
 /* =============
     Typography
 ============= */
+body {
+  font-family: comfortaa;
+}
+
 h1,
 h2,
 h3,
@@ -422,6 +473,75 @@ textarea {
 /* =============
     Header
 ============= */
+.headimg {
+  background: url("../../../deploy/img/hero/hero.jpg") no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 600px;
+}
+
 /* =============
     Footer
 ============= */
+.footer {
+  display: grid;
+  grid-template-areas: ". footer .";
+}
+.footer .socials {
+  color: black;
+  background: url("../../../deploy/img/social/facebook-square-brands.svg") no-repeat;
+  background: url("../../../deploy/img/social/twitter-square-brands.svg") no-repeat;
+  background: url("../../../deploy/img/social/youtube-square-brands.svg") no-repeat;
+  background: url("../../../deploy/img/social/instagram-square-brands.svg") no-repeat;
+}
+
+/* =============
+   creative
+============= */
+.creative {
+  background: #eeeeee;
+}
+
+.creativeimg {
+  background: url("../../../deploy/img/creative/shoes.jpg") no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 500px;
+}
+
+/* =============
+   journal
+============= */
+.journal {
+  margin: 16px;
+}
+
+.new-image {
+  background-size: cover;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  height: 200px;
+  padding: 30px;
+}
+
+.new-content {
+  background: #eeeeee;
+}
+
+#imgg1 .new-image {
+  background: url("../../../deploy/img/journal/hanging-sign.jpg") no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+#imgg2 .new-image {
+  background: url("../../../deploy/img/journal/letterpress-cards.jpg") no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+#imgg3 .new-image {
+  background: url("../../../deploy/img/journal/business-cards.jpg") no-repeat;
+  background-size: cover;
+  background-position: center;
+}

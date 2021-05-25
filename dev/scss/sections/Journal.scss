@@ -1,0 +1,41 @@
+/* =============
+   journal
+============= */
+.journal {
+	margin: 16px;
+}
+.new-image {
+	background-size: cover;
+	grid-template-columns: repeat(12, 1fr);
+	grid-template-rows: repeat(6, 1fr);
+	height: 200px;
+	padding: 30px;
+}
+
+.new-content {
+	background: $lightGrey;
+} 
+
+#imgg1 {
+	.new-image {
+		background: url("../../../deploy/img/journal/hanging-sign.jpg") no-repeat;
+		background-size: cover;
+		background-position: center;
+	}
+}
+
+#imgg2 {
+	.new-image {
+		background: url("../../../deploy/img/journal/letterpress-cards.jpg") no-repeat;
+		background-size: cover;
+		background-position: center;
+	}
+}
+
+#imgg3 {
+	.new-image {
+		background: url("../../../deploy/img/journal/business-cards.jpg") no-repeat;
+		background-size: cover;
+		background-position: center;
+	}
+}

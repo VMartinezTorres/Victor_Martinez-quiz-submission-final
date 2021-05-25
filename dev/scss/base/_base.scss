@@ -29,3 +29,64 @@ ul{
     }
 }
 
+main {
+    display: grid;
+    grid-template-areas:
+      "header"
+      "creative"
+      "journal"
+      "footer";
+  
+    .header {
+      grid-area: header;
+
+      .title {
+        display: flex;
+        justify-content: center;
+      }
+    }
+  
+    .creative {
+      height: 70px;
+      margin: 30px 10px 0;
+  }
+  
+    .journal {
+      grid-area: journal;
+  
+      ul{
+        display: grid;
+        grid-gap: 40px;
+        grid-template-areas:
+          "imgg1"
+          "imgg2"
+          "imgg3";
+  
+       @include md {
+            grid-template-columns: repeat(2, 300px);
+            grid-template-areas:
+              "imgg1 imgg1 imgg2 imgg2"
+              "imgg3 imgg3";
+        }
+  
+         @include lg {
+            grid-template-columns: repeat(3, 300px);
+            grid-template-areas:
+              "imgg1 imgg1 imgg2 imgg2 imgg3 imgg3";
+        }
+      }
+    }
+  
+    #footer {
+      grid-area: footer;
+  
+        .socials ul {
+          display: flex;
+        }
+   
+          @include lg {
+            grid-template-areas:
+            "locations  newsletter socials";
+          }
+      }
+  }

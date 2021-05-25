@@ -1,0 +1,8 @@
+/* =============
+   creative
+============= */
+.shoes {
+  background: url("../../../deploy/img/creative/shoes.jpg") no-repeat;
+  background-size: cover;
+  background-position: center;
+}

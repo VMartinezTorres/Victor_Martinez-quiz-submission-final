@@ -1,0 +1,14 @@
+/* =============
+   creative
+============= */
+
+.creative {
+	background: $lightGrey;
+} 
+
+.creativeimg {
+		background: url("../../../deploy/img/creative/shoes.jpg") no-repeat;
+		background-size: cover;
+		background-position: center;
+		height: 500px;
+}
